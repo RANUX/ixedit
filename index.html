@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="ixedit/ixedit.css">
+  <link rel="stylesheet" type="text/css" href="sample-style/ui-sui.css">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="ixedit/ixedit.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<style type="text/css">
+#dragdropcontainer {
+  width: 370px;
+  height: 250px;
+  border: 1px dotted #000;
+  position: relative;
+  background-color: #ccc;
+}
+#filetobedragged {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  /*background-image: url(file.png);*/
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  text-align: center;
+  overflow: visible;
+  position: absolute;
+  top: 25px;
+  left: 270px;
+}
+#foldertobedropped {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  /*background-image: url(folder.png);*/
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  text-align: center;
+  overflow: visible;
+  position: absolute;
+  top: 150px;
+  left: 70px;
+}
+#dragdropcontainer span {
+  position: relative;
+  display: block;
+  top: 48px;
+  left: -25px;
+  width: 100px;
+}
+#dragdropcontainer .drophover {
+  background-color: transparent !important;
+  background-position: -48px 0;
+}
+
+
+  #slidingcontainer {
+  width: 370px;
+  background-image: url(bg-grad.gif);
+  border: 1px solid #999;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding:12px 0 14px 0;
+  text-align: center;
+  background-repeat: repeat-x;
+  background-color: #ddd;
+
+}
+#slidingcontainer h2 {
+  margin: 0 12px;
+  text-align: left;
+  font-size: 14px;
+
+}
+#slidingcontainer p {
+  margin: 12px 12px 0 12px;
+  text-align: left;
+  padding: 0;
+}
+</style>
+
+<div id="slidingcontainer">
+  <h2>Lorem ipsum</h2>
+  <p>Lorem ipsum ~ consequat.</p>
+</div>
+
+<div id="dragdropcontainer">
+  <div id="foldertobedropped">
+    <span>Drop to me</span>
+  </div>
+  <div id="filetobedragged">
+    <span>Drag me</span>
+  </div>
+</div>
+
+<p>
+  <button id="testbtn">Click</button>
+  <input type="text" id="datepicker" value="" />
+</p>
+
+</body>
+</html>
